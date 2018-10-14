@@ -1,25 +1,47 @@
 {
-  "name": "minimal",
+  "name": "boiler apollo",
+  "description": "easy next",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "apollo-boost": "^0.1.16",
-    "graphql": "^14.0.2",
-    "react": "^16.5.2",
-    "react-apollo": "^2.2.4",
-    "react-dom": "^16.5.2",
-    "react-scripts": "^2.0.4"
-  },
+  "author": "XIMet",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/",
+    "format": "prettier --write src/**/*.js"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "dependencies": {
+    "apollo-cache-inmemory": "^1.1.10",
+    "apollo-client": "^2.2.6",
+    "apollo-link-http": "^1.5.3",
+    "graphql": "^14.0.0-rc.1",
+    "graphql-tag": "^2.8.0",
+    "react": "^16.2.0",
+    "react-apollo": "^2.1.0-rc.3",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "recompose": "^0.27.0",
+    "tachyons": "^4.9.1",
+    "timeago.js": "^3.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^1.11.1",
+    "react-scripts": "^2.0.0-next.47d2d941"
+  },
+  "license": "MIT",
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">1%",
+      "last 4 versions",
+      "Firefox ESR",
+      "not ie < 11"
+    ]
+  }
 }
