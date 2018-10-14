@@ -5,10 +5,15 @@ import gql from 'graphql-tag';
 import Link from '../core/link';
 import { displayLoading } from '../core/loading';
 import { displayError } from '../core/error';
+import {default as Example} from './example.js';
 
 const LinkList = ({ links, onAfterVote }) => {
+  const gql = graphql;
+  const query = ALL_LINKS_QUERY;
+  
   return (
     <div>
+      <Example episode={1} />
       {links.map((link, index) => (
         <Link key={link.id} index={index} onAfterVote={onAfterVote} {...link} />
       ))}
